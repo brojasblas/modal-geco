@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom'; // ho aggiunto Link
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -93,6 +94,7 @@ export default function MiniDrawer() {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <Drawer variant="permanent" open={open}>
+
         <DrawerHeader>
           <IconButton
             color="inherit"
@@ -103,9 +105,14 @@ export default function MiniDrawer() {
             {open ? <ChevronLeftIcon /> : <MenuIcon />}
           </IconButton>
         </DrawerHeader>
+
         <Divider />
+
         <List>
           <ListItem disablePadding sx={{ display: 'block' }}>
+
+<Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -124,9 +131,11 @@ export default function MiniDrawer() {
               </ListItemIcon>
               <ListItemText primary="Home" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
+</Link> 
           </ListItem>
 
           <ListItem disablePadding sx={{ display: 'block' }}>
+<Link to="/listadipendenti" style={{ textDecoration: 'none', color: 'inherit' }}>   
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -145,6 +154,7 @@ export default function MiniDrawer() {
               </ListItemIcon>
               <ListItemText primary="Lista Dipendenti" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
+</Link> 
           </ListItem>
 
           {/* Repeti il blocco ListItem per ciascun elemento della lista */}
