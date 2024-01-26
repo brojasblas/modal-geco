@@ -18,7 +18,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     minWidth: '80%',
-    maxHeight: '80vh', // Imposta un'altezza massima per la modal
+    height: '80vh', // Imposta un'altezza massima per la modal
     overflow: 'auto', // Abilita lo scrolling quando necessario,
     bgcolor: 'background.paper',
     boxShadow: 24,

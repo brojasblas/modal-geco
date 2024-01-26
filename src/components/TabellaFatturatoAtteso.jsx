@@ -11,8 +11,8 @@ import Paper from '@mui/material/Paper';
   
 function TabellaFatturatoAtteso() {
     return (
-            <TableContainer sx={{ display:'flex', justifyContent:'center'}}>
-                <Table sx={{ width: '80%' }} aria-label="spanning table">
+            <TableContainer sx={{ display: 'flex', justifyContent: 'center', mb:3, mt:2}}>
+                <Table aria-label="spanning table">
                     <TableHead>
                         <TableRow>
                             <TableCell align="center" colSpan={3}>

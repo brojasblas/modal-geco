@@ -26,19 +26,19 @@ function createData(name, calories, fat, carbs, tariffa, price) {
       {
         date: "Ottobre",
         hours: "130",
-        amount: 4902.50,
+        amount: 4902.5,
         tariffa: 215,
       },
       {
         date: "Novembre",
         hours: "120",
-        amount: 2902.50,
+        amount: 2902.5,
         tariffa: 215,
       },
       {
         date: "Dicembre",
         hours: "99",
-        amount: 1902.50,
+        amount: 1902.5,
         tariffa: 215,
       },
     ],
@@ -76,7 +76,9 @@ function Row(props) {
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
-                    <TableCell align="center" colSpan={5}>2019</TableCell>
+                    <TableCell align="center" colSpan={5}>
+                      2019
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>Periodo</TableCell>
@@ -93,7 +95,7 @@ function Row(props) {
                       <TableCell>{historyRow.hours}</TableCell>
                       <TableCell align="right">{historyRow.amount}</TableCell>
                       <TableCell align="right">
-                      {Math.round(historyRow.hours * row.tariffa )}
+                        {Math.round(historyRow.hours * row.tariffa)}
                       </TableCell>
                       <TableCell align="right">{historyRow.tariffa}</TableCell>
                     </TableRow>
@@ -104,7 +106,9 @@ function Row(props) {
               <Table size="small" aria-label="purchases">
                 <TableHead>
                   <TableRow>
-                    <TableCell align="center" colSpan={5}>2020</TableCell>
+                    <TableCell align="center" colSpan={5}>
+                      2020
+                    </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>Periodo</TableCell>
@@ -121,7 +125,7 @@ function Row(props) {
                       <TableCell>{historyRow.hours}</TableCell>
                       <TableCell align="right">{historyRow.amount}</TableCell>
                       <TableCell align="right">
-                        {Math.round(historyRow.hours * row.tariffa )}
+                        {Math.round(historyRow.hours * row.tariffa)}
                       </TableCell>
                       <TableCell align="right">{historyRow.tariffa}</TableCell>
                     </TableRow>
@@ -162,23 +166,30 @@ const rows = [
 
 export default function CollapsibleTable() {
   return (
-      <TableContainer sx={{ display: 'flex', justifyContent: 'center'}}>
-        <Table aria-label="collapsible table" sx={{width: '80%'}}>
-          <TableHead>
-            <TableRow>
-              <TableCell />
-              <TableCell>Nome</TableCell>
-              <TableCell align="right">Ore Totali</TableCell>
-              <TableCell align="right">Ip. Fatturato Totale</TableCell>
-              <TableCell align="right">Costo Totale</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {rows.map((row) => (
-              <Row key={row.name} row={row} />
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+    <TableContainer
+      sx={{ display: "flex", justifyContent: "center", mb: 3, mt: 2 }}
+    >
+      <Table aria-label="collapsible table">
+        <TableHead>
+          <TableRow>
+            <TableCell align="center" colSpan={7}>
+              Lista Dipendenti
+            </TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell />
+            <TableCell>Nome</TableCell>
+            <TableCell align="right">Ore Totali</TableCell>
+            <TableCell align="right">Ip. Fatturato Totale</TableCell>
+            <TableCell align="right">Costo Totale</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <Row key={row.name} row={row} />
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 }

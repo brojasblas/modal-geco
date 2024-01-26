@@ -10,8 +10,8 @@ import TableRow from '@mui/material/TableRow';
   
 function TabellaFatturato() {
     return (
-            <TableContainer sx={{ display: 'flex', justifyContent: 'center', mb:7, mt:7, borderRadius: '2'}}>
-                <Table sx={{ width: '80%', borderRadius: '10'}} aria-label="spanning table">
+            <TableContainer sx={{ display: 'flex', justifyContent: 'center', mb:3, mt:2}}>
+                <Table aria-label="spanning table">
                     <TableHead>
                         <TableRow>
                             <TableCell align="center" colSpan={7}>
