@@ -1,0 +1,25 @@
+.tables-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    /* Sovrascrivi gli stili specifici di MUI */
+    .MuiPaper-root.MuiTableContainer-root {
+        width: 90%;
+    }
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+th {
+    background-color: #1976D2;
+    color: white !important;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
