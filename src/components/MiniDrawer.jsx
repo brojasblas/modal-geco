@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom'; // ho aggiunto Link
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -69,12 +70,12 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 );
 
 const icons = [
-  <HomeIcon />,
-  <BadgeIcon />, 
-  <TrendingUpIcon />, 
-  <EuroIcon />,
-  <LocalShippingIcon />,
-  <SummarizeIcon />,
+  <HomeIcon />, // home
+  <BadgeIcon />, // dipendenti
+  <TrendingUpIcon />, // fatturato atteso
+  <EuroIcon />, // fatturato
+  <LocalShippingIcon />, // ordinato
+  <SummarizeIcon />, // sintesi
 ];
 
 export default function MiniDrawer() {
@@ -93,6 +94,7 @@ export default function MiniDrawer() {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <Drawer variant="permanent" open={open}>
+
         <DrawerHeader>
           <IconButton
             color="inherit"
@@ -103,9 +105,14 @@ export default function MiniDrawer() {
             {open ? <ChevronLeftIcon /> : <MenuIcon />}
           </IconButton>
         </DrawerHeader>
+
         <Divider />
+
         <List>
           <ListItem disablePadding sx={{ display: 'block' }}>
+{/* principale */}
+<Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -124,9 +131,12 @@ export default function MiniDrawer() {
               </ListItemIcon>
               <ListItemText primary="Home" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
+</Link> 
           </ListItem>
 
+{/* lista dipendenti */}
           <ListItem disablePadding sx={{ display: 'block' }}>
+<Link to="/listadipendenti" style={{ textDecoration: 'none', color: 'inherit' }}>   
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -143,11 +153,89 @@ export default function MiniDrawer() {
               >
                 {icons[1]}
               </ListItemIcon>
-              <ListItemText primary="Lista Dipendenti" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Dipendenti" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
+</Link> 
+          </ListItem>
+
+{/* fatturato */}
+          <ListItem disablePadding sx={{ display: 'block' }}>
+<Link to="/fatturato" style={{ textDecoration: 'none', color: 'inherit' }}>   
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                {icons[3]}
+              </ListItemIcon>
+              <ListItemText primary="Fatturato" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+</Link> 
+          </ListItem>
+
+{/* fatturato atteso */}
+          <ListItem disablePadding sx={{ display: 'block' }}>
+<Link to="/fatturatoatteso" style={{ textDecoration: 'none', color: 'inherit' }}>   
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                {icons[2]}
+              </ListItemIcon>
+              <ListItemText primary="Fatturato Atteso" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+</Link> 
+          </ListItem>
+
+{/* sintesi */}
+          <ListItem disablePadding sx={{ display: 'block' }}>
+<Link to="/sintesi" style={{ textDecoration: 'none', color: 'inherit' }}>   
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                {icons[5]}
+              </ListItemIcon>
+              <ListItemText primary="Sintesi" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+</Link> 
           </ListItem>
 
           {/* Repeti il blocco ListItem per ciascun elemento della lista */}
+
+{/* aggiungere ordinato icona 4 */}
+
+
+
         </List>
       </Drawer>
     </Box>

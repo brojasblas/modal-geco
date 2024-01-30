@@ -130,8 +130,8 @@ function Row(props) {
     ];
   
     return (
-      <div className="table-container">
-        <TableContainer component={Paper}>
+      
+        <TableContainer sx={{ display: 'flex', justifyContent: 'center', mb:3, mt:2}}>
           <Table aria-label="collapsible table">
             <TableHead>
               <TableRow>
@@ -155,7 +155,6 @@ function Row(props) {
             </TableBody>
           </Table>
         </TableContainer>
-      </div>
     );
   }
   

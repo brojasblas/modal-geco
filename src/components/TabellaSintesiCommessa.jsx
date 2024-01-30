@@ -10,10 +10,7 @@ import TableRow from "@mui/material/TableRow";
 export default function TabellaSintesiCommessa() {
   return (
     <TableContainer
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-      }}
+    sx={{ display: 'flex', justifyContent: 'center', mt:2}}
     >
       <Table sx={{ width: "100%" }}>
         <TableHead>

@@ -7,6 +7,8 @@ import MiniDrawer from './MiniDrawer';
 import TabellaDefault from './TabellaDefault';
 import ListaDipendentiCommessa from './ListaDipendentiCommessa';
 import TabellaFatturato from './TabellaFatturato';
+import TabellaFatturatoAtteso from './TabellaFatturatoAtteso';
+import SintesiCommessa from './SintesiCommessa';
 import {Routes, Route} from "react-router-dom";
 
 const style = {
@@ -16,7 +18,7 @@ const style = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     minWidth: '80%',
-    maxHeight: '80vh', // Imposta un'altezza massima per la modal
+    height: '80vh', // Imposta un'altezza massima per la modal
     overflow: 'auto', // Abilita lo scrolling quando necessario,
     bgcolor: 'background.paper',
     boxShadow: 24,
@@ -46,6 +48,9 @@ export default function ModelCommessa() {
               <Route path="/" element={<TabellaDefault />} />
               <Route path="/listadipendenti" element={<ListaDipendentiCommessa />} />
               <Route path="/fatturato" element={<TabellaFatturato />} />
+              <Route path="/fatturatoatteso" element={<TabellaFatturatoAtteso />} />
+              <Route path="/sintesi" element={<SintesiCommessa />} />
+              {/* <Route path="/ordinato" element={<TabellaOrdinato />} /> */}
             </Routes>
           </Box>
         </Box>
