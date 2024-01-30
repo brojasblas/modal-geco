@@ -153,7 +153,7 @@ export default function MiniDrawer() {
               >
                 {icons[1]}
               </ListItemIcon>
-              <ListItemText primary="Lista Dipendenti" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Dipendenti" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
 </Link> 
           </ListItem>
@@ -201,7 +201,7 @@ export default function MiniDrawer() {
               >
                 {icons[2]}
               </ListItemIcon>
-              <ListItemText primary="Lista Dipendenti" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Fatturato Atteso" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
 </Link> 
           </ListItem>
@@ -225,7 +225,7 @@ export default function MiniDrawer() {
               >
                 {icons[5]}
               </ListItemIcon>
-              <ListItemText primary="Sintesi Commessa" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Sintesi" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
 </Link> 
           </ListItem>
