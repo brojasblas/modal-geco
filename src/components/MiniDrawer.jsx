@@ -232,7 +232,29 @@ export default function MiniDrawer() {
 
           {/* Repeti il blocco ListItem per ciascun elemento della lista */}
 
-{/* aggiungere ordinato icona 4 */}
+{/* ordinato */}
+<ListItem disablePadding sx={{ display: 'block' }}>
+<Link to="/ordinato" style={{ textDecoration: 'none', color: 'inherit' }}>   
+            <ListItemButton
+              sx={{
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
+              }}
+            >
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                {icons[4]}
+              </ListItemIcon>
+              <ListItemText primary="Ordinato" sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
+</Link> 
+          </ListItem>
 
 
 

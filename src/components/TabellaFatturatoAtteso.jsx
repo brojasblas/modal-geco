@@ -16,7 +16,7 @@ function TabellaFatturatoAtteso() {
                     <TableHead>
                         <TableRow>
                             <TableCell align="center" colSpan={3}>
-                                Fatturato Atteso
+                                FATTURATO ATTESO
                             </TableCell>
                         </TableRow>
                         <TableRow>

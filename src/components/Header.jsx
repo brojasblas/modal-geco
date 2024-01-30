@@ -5,7 +5,7 @@ function Header() {
 
     return (
         <>
-            <div className="header-container">
+            <div className="header-container" color="primary">
                 <div className="header-section">
                     <div className="section-left">
                         <div className="header-info">

@@ -173,7 +173,7 @@ export default function CollapsibleTable() {
         <TableHead>
           <TableRow>
             <TableCell align="center" colSpan={7}>
-              Lista Dipendenti
+              DIPENDENTI
             </TableCell>
           </TableRow>
           <TableRow>

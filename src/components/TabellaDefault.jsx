@@ -136,7 +136,7 @@ function Row(props) {
             <TableHead>
               <TableRow>
                 <TableCell align="center" colSpan={6}>
-                    Totale
+                    TOTALE
                 </TableCell>
               </TableRow>
               <TableRow>
